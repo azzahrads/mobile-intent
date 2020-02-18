@@ -1,6 +1,7 @@
 package id.ac.polinema.intent;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,7 +31,7 @@ public class ProfileBundleActivity extends AppCompatActivity {
             // TODO: display value here
             username.setText(extras.getString(USERNAME_KEY));
             name.setText(extras.getString(NAME_KEY));
-            age.setText(extras.getString(AGE_KEY));
+            age.setText(String.valueOf(getIntent().getIntExtra(AGE_KEY, 0)));
         }
     }
 }
